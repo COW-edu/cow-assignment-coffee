@@ -1,6 +1,8 @@
+package org.example;
+
 import java.util.Scanner;
 
-public class CafeInitial {
+public class Cafe {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
@@ -18,12 +20,9 @@ public class CafeInitial {
 				System.out.println("2. 에스프레소\t2400원");
 				System.out.println("3. 카페라떼\t4200원");
 				System.out.println("4. 밀크티\t5100원");
-
 				// TODO: 주문 로직을 구현하세요.
-
 			} else if (num == 2) {
 				// TODO: 취소 로직을 구현하세요.
-
 			} else if (num == 3) {
 				// TODO: 결제 로직을 구현하세요.
 
@@ -38,4 +37,3 @@ public class CafeInitial {
 		sc.close();
 	}
 }
-이거 주고
