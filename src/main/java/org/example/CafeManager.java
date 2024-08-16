@@ -4,6 +4,22 @@ import java.util.Scanner;
 
 public class CafeManager {
 
+  private static boolean isTalking = false;
+
+  public void startTalking() {
+    System.out.println("대화를 시작합니다!");
+    isTalking = true;
+  }
+
+  public void finishTalking() {
+    System.out.println("대화 종료하겠습니다!");
+    isTalking = false;
+  }
+
+  public boolean isTalking() {
+    return isTalking;
+  }
+
   public void introduceFunction() {
     System.out.println("☆★☆★ Talking CafeManager ☆★☆★");
     System.out.println("1. 주문하기");
@@ -19,10 +35,6 @@ public class CafeManager {
     System.out.println("3. 카페라떼\t4200원");
     System.out.println("4. 밀크티\t5100원");
     System.out.print("몇 번을 선택하시겠습니까? ");
-  }
-
-  public void finish() {
-    System.out.println("대화 종료!");
   }
 
   public void faultValue() {

@@ -4,8 +4,8 @@ public class Cafe {
 
   public static void main(String[] args) {
     CafeManager cafeManager = new CafeManager();
-    boolean isRunning = true;
-    while (isRunning) {
+    cafeManager.startTalking();
+    while (cafeManager.isTalking()) {
       cafeManager.introduceFunction();
       int talkNumber = cafeManager.askNumber();
 
@@ -22,8 +22,7 @@ public class Cafe {
           // TODO: OrderSystem 결제 구현 로직 호출
         }
         case 4 -> {
-          cafeManager.finish();
-          isRunning = false;
+          cafeManager.finishTalking();
         }
         default -> {
           cafeManager.faultValue();
