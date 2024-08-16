@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CafeManager {
 
-  private static boolean isTalking = false;
+  private boolean isTalking = false;
 
   public void startTalking() {
     System.out.println("대화를 시작합니다!");
