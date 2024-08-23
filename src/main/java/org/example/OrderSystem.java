@@ -2,10 +2,10 @@ package org.example;
 
 public interface OrderSystem {
 
-  void pay();
+    void pay();
 
-  void order();
+    void order();
 
-  void cancelOrder();
+    void cancelOrder();
 
 }
