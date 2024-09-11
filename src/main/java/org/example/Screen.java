@@ -16,8 +16,6 @@ public interface Screen {
 
   void showOrderedMenu(List<String> menus);
 
-  void faultValue();
-
   int inputFunctionNumber() throws IOException;
 
   List<Integer> inputMenuNumbers() throws IOException;

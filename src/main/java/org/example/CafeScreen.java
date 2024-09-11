@@ -52,10 +52,6 @@ public class CafeScreen implements Screen {
     println(builder.toString());
   }
 
-  public void faultValue() {
-    println("번호를 잘못 입력하셨습니다!");
-  }
-
   @Override
   public int inputFunctionNumber() throws IOException {
     return Integer.parseInt(READER.readLine());
