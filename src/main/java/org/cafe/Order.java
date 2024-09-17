@@ -45,7 +45,13 @@ public class Order implements OrderSystem {
     public void cancel() {
         System.out.println(User.orders);
         System.out.println("삭제할 메뉴번호를 적어주세요.");
-        int number = kioskSystem.askNumber();
+        int number;
+        do {
+            number = kioskSystem.askNumber();
+            if (number > User.orders.size()) {
+                System.out.println("삭제할 번호를 다시 입력하세요");
+            }
+        } while (number > User.orders.size());
         //넘버, 빠지는 글자와 일치하는거 빼고, 가격도 뺀다.
         String remove = User.orders.remove(number -1);
         switch (remove) {
@@ -63,6 +69,8 @@ public class Order implements OrderSystem {
             }
         }
         count--;
+        System.out.println("현재 메뉴");
+        System.out.println(User.orders);
     }
 
     @Override
