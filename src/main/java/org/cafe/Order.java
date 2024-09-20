@@ -1,5 +1,6 @@
 package org.cafe;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Order implements OrderSystem {
@@ -43,7 +44,11 @@ public class Order implements OrderSystem {
 
     @Override
     public void cancel() {
-        System.out.println(User.orders);
+        Iterator<String> iterator = User.orders.iterator();
+        while(iterator.hasNext()) {
+            String str = iterator.next();
+            System.out.println((User.orders.indexOf(str)+1) + ". " + str);
+        }
         System.out.println("삭제할 메뉴번호를 적어주세요.");
         int number;
         do {

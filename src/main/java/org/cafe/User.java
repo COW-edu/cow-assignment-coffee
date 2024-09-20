@@ -10,4 +10,5 @@ public class User {
     static List<String> orders = new ArrayList<>();
     //TODO 싱글톤 패턴으로 만들어보기
 
+
 }
