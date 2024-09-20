@@ -7,7 +7,7 @@ public class Order implements OrderSystem {
     String name;
     int price;
     int count = 0;
-    User user = new User();
+    User user = User.getUser();
     KioskSystem kioskSystem = new KioskSystem();
 
     @Override
